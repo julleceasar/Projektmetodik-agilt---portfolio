@@ -1,5 +1,5 @@
 import express from "express";
-import User from "../model/user.js"
+import User from "../model/User.js"
 
 
 const router = express.Router()
@@ -7,8 +7,6 @@ const router = express.Router()
 // ...
 router.post("/newUser", async (req, res) => { 
     try {
-
-      
 
       await user.save();
       res.send(user);
@@ -19,15 +17,15 @@ router.post("/newUser", async (req, res) => {
 
 // ...
 router.get("/getAll", async (req, res) => {
-    console.log("hhelloo mtf")
+    
   
     try {
 
       const user = await User.find()
-
-      res.send(user);
+     
+      res.json(user);
     } catch (error) {
-      res.status(500).send(error);
+      res.status(500).json(error);
     }
   });
 
