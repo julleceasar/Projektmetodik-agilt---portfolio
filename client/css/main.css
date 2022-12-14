@@ -155,9 +155,42 @@ i {
     opacity: 80%;
 }
 
+#kompetens {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
+.kompContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.headerKomp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.komp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span {
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
 
 
 @media screen and (max-width: 992px) {
@@ -175,3 +208,6 @@ i {
     }
     
   }
+
+
+}
