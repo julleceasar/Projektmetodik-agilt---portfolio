@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
 
+  body {
+    font-family: 'Roboto', sans-serif;
   }
 
 
@@ -64,12 +69,12 @@ a {
 
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 80px;
     align-items: center;
     width: 100%;
     background-color: whitesmoke;
-    border-bottom: 1px solid lightgrey;
 }
 
 .heroText {
@@ -102,13 +107,6 @@ a {
     gap: 100px;
 }
 
-.image {
-    width: 300px;
-    height: 400px;
-    background-color: lightgrey;
-}
-
-
 .personInfo {
     display: flex;
     flex-direction: column;
@@ -117,25 +115,13 @@ a {
     width: 300px;
 }
 
-.contactContainer {
-    display: flex;
-    width: 100%;
-    height: 600px;
-
+.image {
+    width: 300px;
+    height: 400px;
+    background-color: lightgrey;
 }
 
-.contactMap {
-    background-color: whitesmoke;
-    width: 60%;
-    height: 100%;
-}
 
-.contactText {
-    padding: 20px;
-    width: 40%;
-    height: 100%;
-
-}
 
 #kompetens {
     display: flex;
@@ -172,6 +158,7 @@ span {
     padding-right: 20px;
     cursor: pointer;
 }
+
 
 
 @media screen and (max-width: 992px) {
