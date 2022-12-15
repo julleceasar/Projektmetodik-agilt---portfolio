@@ -10,6 +10,6 @@ kompetens.innerHTML = `
     <span>CSS</span>
     <span>HTML</span>
     <span>JavaScript</span>
-    <span>PhP</span>
+    <span>PHP</span>
     </div>
 </div>`;
