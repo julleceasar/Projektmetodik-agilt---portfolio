@@ -67,7 +67,7 @@ router.get("/getSkills/html", async (req, res) => {
 });
 
 // ...
-router.get("/getSkills/js", async (req, res) => {
+router.get("/getSkills/javaScript", async (req, res) => {
     
   
   try {
