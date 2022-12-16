@@ -1,3 +1,27 @@
 GET http://localhost:3000/user/getAll
 
 ###
+
+GET http://localhost:3000/user/getByName/fredriklexo
+
+###
+
+
+GET http://localhost:3000/user/getSkills/css
+
+###
+
+
+GET http://localhost:3000/user/getSkills/html
+
+###
+
+
+GET http://localhost:3000/user/getSkills/js
+
+###
+
+
+GET http://localhost:3000/user/getSkills/php
+
+###
