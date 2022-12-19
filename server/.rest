@@ -25,3 +25,5 @@ GET http://localhost:3000/user/getSkills/js
 GET http://localhost:3000/user/getSkills/php
 
 ###
+
+GET http://localhost:3000/user/getSlug/jacobhoggzor
