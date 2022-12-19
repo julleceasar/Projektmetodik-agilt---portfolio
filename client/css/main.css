@@ -197,6 +197,10 @@ span {
 #contactBtn {
     padding: 10px 10px;
 }
+span {
+    font-size: 15px;
+    height: 30px;
+}
 }
 
 @media screen and (max-width: 420px) {
@@ -205,5 +209,8 @@ span {
     }
     #contactBtn {
         padding: 7px 7px;
+    }
+    span {
+        font-size: 10px;
     }
 }
