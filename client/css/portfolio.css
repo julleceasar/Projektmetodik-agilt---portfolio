@@ -44,7 +44,7 @@ main {
     margin: 50px;
 }
 
-.title {
+#slogan {
     text-align: center;
  }
 
@@ -76,15 +76,23 @@ main {
     width: 300px;
 }
 
+.skillsInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    width: 200px;
+}
+
 .image {
     width: 450px;
     height: 300px;
+    object-fit: cover;
     background-color: lightgrey;
 }
 
 form {
     width: 300px;
-    height: 300px;  
     padding: 40px;
 }
 
@@ -104,8 +112,14 @@ form {
     padding: 10px;
 }
 
-.stars {
-    margin: 10px;
+
+
+.starContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
 }
 
 .projektText {
