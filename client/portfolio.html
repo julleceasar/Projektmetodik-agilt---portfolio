@@ -4,18 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script defer src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="./js/components/navBarComponent.js"></script>
     <script defer src="./js/components/footerComponent.js"></script>
-
-    <title>Portfolio</title>
-
+    <title>Porfolio</title>
 </head>
 <body>
     <nav id="navbar"></nav>
     <main>
-        <h1>firstname lastname (portfolio CV-page)</h1>
+
+        <div class="title">
+            <h1>firstname lastname (portfolio CV-page)</h1> <br>     
+            <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+
+        <section class="projekt">
+            <div class="container">
+                <div class="info">
+                    <img class="image" src="https://adminfin.fullerton.edu/finance/adminsys/images/ProjectsPage.jpg" alt="">
+                    
+                </div>
+                <div class="info">
+                    
+                  <form>
+                    <h2>Kontakta mig</h2><br>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+                        <label for="name">Your Name:</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="email">Email Address:</label><br>
+                        <input type="text" id="email" name="email"><br>
+                        <button id="kontaktBtn">Kontakta Mig</button>
+                  </form>                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="info">                    
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse voluptates rem impedit sit. Atque, minus aliquid voluptas repellat repellendus quidem eaque nihil cum nostrum ut ad quam quis distinctio vel?</p>                   
+                </div>
+                <div class="info">
+                    <h3>Skills</h3>
+                      <div class="skills">
+                        <p>HTML<i class="fa-sharp fa-solid fa-star stars"></i></p>
+                        <p>CSS<i class="fa-sharp fa-solid fa-star stars"></i></p>
+                        <p>JavaScript<i class="fa-sharp fa-solid fa-star stars"></i></p>
+                      </div>
+                    
+                </div>
+            </div>
+
+            <h2 class="title">Mina Projekter</h2>
+
+            <div class="projektContainer">
+                <div class="info">
+                    
+                    <h4 class="title">Projekt 1</h4>
+                    <img class="miniImage" src="https://adminfin.fullerton.edu/finance/adminsys/images/ProjectsPage.jpg" alt="">
+                    <p class="projektText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, consequatur iure excepturi dignissimos perferendis qui repudiandae quae quia nemo, nulla facere, modi ipsum alias expedita ullam commodi. Odit, in veritatis!</p>
+
+                </div>
+                <div class="info">
+                    <h4 class="title">Projekt 2</h4>
+                    <img class="miniImage" src="https://adminfin.fullerton.edu/finance/adminsys/images/ProjectsPage.jpg" alt="">
+                    
+                    <p class="projektText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fuga reiciendis temporibus debitis? Est vero expedita aliquam? Sint qui hic cupiditate explicabo animi quo maxime sequi nihil, odio magni odit?</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer id="footer"></footer>
 </body>
