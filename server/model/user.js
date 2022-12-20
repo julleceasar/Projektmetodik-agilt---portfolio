@@ -26,6 +26,11 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
+  slug: {
+    type: String,
+    required: true,
+  },
+  
   project: Array,
   html: Number,
   css: Number,

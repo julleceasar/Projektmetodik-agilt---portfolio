@@ -44,11 +44,12 @@ main {
     margin: 50px;
 }
 
-.h {
+#slogan {
     font-style: italic;
 }
 
 .title {
+    margin-top: 50px;
     text-align: center;
  }
 
@@ -67,9 +68,9 @@ main {
 .container {
     flex-wrap: wrap;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 200px;
+    width: 800px;
 }
 
 .info {
@@ -80,27 +81,37 @@ main {
     width: 300px;
 }
 
+.skillsInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    padding: 40px;
+
+}
+
 .image {
     width: 450px;
     height: 300px;
+    object-fit: cover;
     background-color: lightgrey;
 }
 
 form {
+
     width: 300px;
-    height: 300px;  
     padding: 40px;
 }
 
 #kontaktBtn {
-     margin: 10px;
-     padding: 8px;
+    margin-top: 10px;
+     padding: 10px;
      border: none;
      background-color: rgb(85, 111, 180);
      color: white;
      cursor: pointer;
-     font-size: 12px;
-     width: 160px;
+     font-size: 14px;
+     width: 180px;
  }
  
 
@@ -108,8 +119,14 @@ form {
     padding: 10px;
 }
 
-.stars {
-    margin: 10px;
+
+
+.starContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
 }
 
 .projektText {
@@ -133,3 +150,45 @@ form {
     align-items: center;
     flex-direction: row;
 }
+
+#name {
+    padding: 5px;
+}
+
+#email {
+    padding: 5px;
+
+}
+
+
+
+@media screen and (max-width: 992px) {
+   .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+   }
+
+   .image{
+    width: 100%;
+   }
+
+   form {
+    padding: 0;
+   }
+
+   .skillsInfo {
+    padding: 0;
+   }
+
+   .projektContainer {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+    
+  }
+

@@ -39,9 +39,6 @@ main {
 
 }
 
-h3 {
-    padding: 10px;
-}
 
 #contactBtn {
     margin: 50px;
@@ -64,6 +61,7 @@ h3 {
 }
 
 #logo {
+    width: 100px;
     margin: 50px;
 }
 

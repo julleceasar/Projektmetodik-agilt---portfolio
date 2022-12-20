@@ -82,12 +82,15 @@
                 button.classList.add("readMoretBtn")
                 button.innerText = "Läs Mer"
                 
-                let href = document.createElement("a")
-                href.setAttribute("href", info.slug)
+                let link = document.createElement("a")
                 
-     
-                href.append(button)
-                personInfo.append(image, header, href)
+                button.addEventListener('click', () => {
+                    let myUrl = `/portfolio.html?profile=${info.slug}`
+                    link.href = myUrl
+                })
+
+                link.append(button)
+                personInfo.append(image, header, link)
                 personContainer.append(personInfo)
                 main.append(personContainer)
     
@@ -121,15 +124,20 @@
                 let button = document.createElement("button")
                 button.classList.add("readMoretBtn")
                 button.innerText = "Läs Mer"
+
                 
-                let href = document.createElement("a")
-                href.setAttribute("href", info.slug)
+                let link = document.createElement("a")
                 
-                href.append(button)
-                personInfo.append(image, header, href)
+                button.addEventListener('click', (e) => {
+                    let myUrl = `/portfolio.html?profile=${info.slug}`
+                    link.href = myUrl
+                })
+                link.append(button)
+                personInfo.append(image, header, link)
                 personContainer.append(personInfo)
         }
     }
+
 
     document.addEventListener("DOMContentLoaded", () => {
         renderProfileFrontPage()
