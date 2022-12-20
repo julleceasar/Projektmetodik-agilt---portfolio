@@ -27,3 +27,14 @@ GET http://localhost:3000/user/getSkills/php
 ###
 
 GET http://localhost:3000/user/getSlug/jacobhoggzor
+
+###
+
+POST http://localhost:3000/user/contactRequest
+Content-Type:application/json
+
+{
+  "userId": "asdsad",  
+  "name": "Jason Sweet",
+  "email": "dawadw"
+}
