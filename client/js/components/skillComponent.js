@@ -6,25 +6,41 @@
     kompetens.innerHTML = `
     <h1 class="headerKomp">Vilken kompetens behöver du?</h1>
     <div class="kompContainer">
-        <div class="komp">
-        <span id="cssBtn">CSS</span>
-        <span id="htmlBtn">HTML</span>
-        <span id="jsBtn">JAVASCRIPT</span>
-        <span id="phpBtn">PHP</span>
+        <div id="wrapper">
+        <span id="cssBtn" class="cssSwitcher">CSS</span>
+        <span id="htmlBtn" class="htmlSwitcher">HTML</span>
+        <span id="jsBtn" class="jsSwitcher">JAVASCRIPT</span>
+        <span id="phpBtn" class="phpSwitcher">PHP</span>
         </div>
     </div>`;
+
+    let prevButton = null;
+    const wrapper = document.getElementById("wrapper")
+
+    wrapper.addEventListener("click", (e) => {
+        const isButton = e.target.nodeName === 'SPAN';
+
+        if(!isButton) {
+            return;
+        }
+        e.target.classList.add('active')
+        if(prevButton !== null) {
+            prevButton.classList.remove('active')
+        }
+        prevButton = e.target;
+        console.log(isButton)
+    })
 
 
     let array = document.getElementsByTagName("span")
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
-
         let tagSpan = element.innerText.toLowerCase()
 
         element.addEventListener("click", () => {
             document.getElementById("people").innerHTML = ""
 
-            if(element.innerText.toLowerCase() == "css") {
+            if(element.innerText.toLowerCase() == "css") {                
                 document.getElementById("people").innerHTML = ""
                 SkillSelector(tagSpan)   
             }
