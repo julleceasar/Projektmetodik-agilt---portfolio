@@ -66,7 +66,8 @@ const renderProfile = (profile) => {
         </div>
         <div class="starContainer" id="php">
             <p>PHP:</p>
-        </div>         
+        </div>    
+        <i>* Denna skala är baserad på konsultens projekt och erfarenhet *</i>     
     </div>
 </div>
 

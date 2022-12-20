@@ -130,8 +130,10 @@ router.get("/getSlug/:value", async (req, res) => {
       
       newContact.save()
 
+
       res.json("Vi har mottagit ditt meddelande och kommer höra av oss till dig inom 24h.")
-      
+
+
     } catch (error) {
       res.status(500).json(error);
     }
