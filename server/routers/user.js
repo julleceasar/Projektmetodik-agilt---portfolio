@@ -1,6 +1,6 @@
 import express from "express";
 import User from "../model/User.js"
-
+import Contact from "../model/Contact.js"
 
 const router = express.Router()
 
@@ -110,6 +110,27 @@ router.get("/getSlug/:value", async (req, res) => {
       const user = await User.find({slug: req.params.value})
      
       res.json(user);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  });
+
+  router.post("/contactRequest", async (req, res) => {
+    
+  
+    try {
+     
+      let newContact = new Contact({
+        name: req.body.name,
+        email: req.body.email,
+        userId: req.body.userId,
+        
+      })
+      
+      newContact.save()
+
+      req.json("Hej julius vad vill du ha i responsen?")
+      
     } catch (error) {
       res.status(500).json(error);
     }
