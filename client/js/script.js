@@ -43,7 +43,7 @@ const renderProfile = (profile) => {
             <input type="text" id="name" name="name"><br>
             <label for="email">Email Address:</label><br>
             <input type="text" id="email" name="email"><br>
-            <button id="kontaktBtn">Kontakta Mig</button>
+            <button id="kontaktBtn">KONTAKTA MIG</button>
       </form>                    
     </div>
 </div>
