@@ -1,3 +1,4 @@
+
 const headerText = document.getElementById('HeaderName')
 const slogan = document.getElementById('slogan')
 const profileSection = document.getElementsByClassName('projekt')[0]
@@ -36,14 +37,15 @@ const renderProfile = (profile) => {
     </div>
     <div class="info">
         
-      <form>
+      <form id='form'>
         <h2>Kontakta mig</h2><br>
-          <p>${profile[0].shortDesc.slice(0,99)}..</p><br>
+          <p>Är du intresserad av mina tjänster eller har andra frågor ? Vänligen fyll i formuläret nedan så hör jag personligen av mig inom 24h!</p><br>
             <label for="name">Namn:</label><br>
-            <input type="text" id="name" name="name"><br>
+            <input type="text" id="name" name="name" required><br>
             <label for="email">Email Address:</label><br>
-            <input type="text" id="email" name="email"><br>
-            <button id="kontaktBtn">KONTAKTA MIG</button>
+            <input type="email" id="email" name="email" required><br>
+            <input id='kontaktBtn' type="submit" value="KONTAKTA MIG">
+            <div id='messageInfo'></div>
       </form>                    
     </div>
 </div>
@@ -74,13 +76,24 @@ const renderProfile = (profile) => {
    
 </div>
     `
+    // SEND FORM DATA TO DATABASE'
+
+    const nameInput = document.getElementById('name')
+    const emailInput = document.getElementById('email')
+    const messageDiv = document.getElementById('messageInfo')
+    const form = document.getElementById('form')
+
+
+    
+    form.addEventListener('submit', (e) => {
+        sendMsgToDatabase(e, nameInput.value, emailInput.value, profile[0]._id, messageDiv)
+    })
+
+
+    // LOOP AND RENDER THE PROJECTS
 
     const projectContainer = document.getElementsByClassName('projektContainer')[0]
-    const htmlContainer = document.getElementById('html')
-    const cssContainer = document.getElementById('css')
-    const javaScriptContainer = document.getElementById('javascript')
-    const phpContainer = document.getElementById('php')
-
+    
     profile[0].project.forEach((project) => {
         const projectParent = document.createElement('div')
         projectParent.setAttribute('id', 'projectParent')
@@ -97,6 +110,10 @@ const renderProfile = (profile) => {
     })
 
     // SKILLS AND STARS START HERE!!!
+    const htmlContainer = document.getElementById('html')
+    const cssContainer = document.getElementById('css')
+    const javaScriptContainer = document.getElementById('javascript')
+    const phpContainer = document.getElementById('php')
     
     for (let i = 0; i < 5; i++) {
 
@@ -155,7 +172,26 @@ const renderProfile = (profile) => {
         
     }
 
+}
 
+const sendMsgToDatabase = async (e, name, email, userId, messageDiv) => {
+    e.preventDefault()
+    const message = {
+        name,
+        email,
+        userId
+    }
+
+    const response = await fetch('/user/contactRequest', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+            },
+        body: JSON.stringify(message)
+    })
+
+    const result = await response.json()
+    messageDiv.innerText = `${result} ✅`
 
 }
 

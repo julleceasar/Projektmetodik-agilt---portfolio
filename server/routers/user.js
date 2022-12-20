@@ -119,6 +119,7 @@ router.get("/getSlug/:value", async (req, res) => {
     
   
     try {
+
      
       let newContact = new Contact({
         name: req.body.name,
@@ -129,11 +130,13 @@ router.get("/getSlug/:value", async (req, res) => {
       
       newContact.save()
 
-      req.json("Hej julius vad vill du ha i responsen?")
+      res.json("Vi har mottagit ditt meddelande och kommer höra av oss till dig inom 24h.")
       
     } catch (error) {
       res.status(500).json(error);
     }
+
+    
   });
   
 export default router
