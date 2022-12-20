@@ -40,6 +40,11 @@ main {
     width: 30%;
 }
 
+#messageInfo {
+    margin-top: 10px;
+    color: #228B22;
+}
+
 #logo {
     margin: 50px;
 }
@@ -159,6 +164,7 @@ form {
     padding: 5px;
 
 }
+
 
 
 
